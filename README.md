@@ -1,2 +1,2 @@
 # proj2-wordLadder
-Project 2- Word Ladder
+Program to find word ladder between 2 given words. Implements both a breadth first search method and a depth first search method.
