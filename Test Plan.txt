@@ -1,1 +1,32 @@
 
+EE422C Project 3 (Word Ladder) Test Plan
+
+Samuel Patterson svp395
+<Student Name> <Student EID>
+Fall 2016
+Test plan summary
+What was your goal, methodology, and conclusion? 1 paragraph. Example:
+Did you use JUNIT? Did you test modules or the whole thing all at once? What areas
+did you feel you covered in your final test suite? What did you not cover?
+
+1.
+a) Test name (LONG_LADDER_DFS)
+b) What feature does the test cover – 1-2 phrases or sentences.
+Checks for correct printing of a long ladder of over XXX words.
+c) Set up for the test – initialization.
+None.
+d) Expected output for a good module.
+Ladder between XXX and YYY. Ladder checked for duplicate words.
+e) The pass/fail criterion for the test.
+No stack overflow, ladder has no duplicates. Ladder correct, as checked by
+'ladder checker'.
+f) Any comments, if any.
+Test is expected to run in 2 seconds or less.
+
+2.
+a) Test name
+b) What feature does the test cover – 1-2 phrases or sentences.
+c) Set up for the test – initialization.
+d) Expected output for a good module.
+e) The pass/fail criterion for the test.
+f) Any comments, if any.
