@@ -5,7 +5,6 @@ import java.util.*;
 public class Node {
 	private String val;
 	private Node parent;
-	private boolean marked;
 	
 	public Node(String s){
 		val = s;
@@ -25,10 +24,5 @@ public class Node {
 	
 	public String getVal(){
 		return val;
-	}
-	
-	/* false if not marked */
-	public boolean isMarked(){
-		return marked;
 	}
 }
