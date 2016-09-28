@@ -80,6 +80,7 @@ public class Main {
 		
 		ArrayList<String> result = new ArrayList<String>();
 		
+		/* put words in proper index */
 		result.add(0, word1);
 		result.add(1, word2);
 		
@@ -152,9 +153,14 @@ public class Main {
 		return words;
 	}
 	
+	/**
+	 * Prints given ladder in proper order.
+	 * @param ladder
+	 */
 	public static void printLadder(ArrayList<String> ladder) {
 		String[] lad = ladder.toArray(new String[ladder.size()]);
 		
+		/* start at the end so that they print in order */
 		System.out.println("a " + (ladder.size() - 2) + "-rung word ladder exists between " + lad[lad.length - 1].toLowerCase() + " and " + lad[0].toLowerCase() + ".");
 		
 		for (int i = lad.length - 1; i >= 0; i--){
@@ -166,7 +172,7 @@ public class Main {
 	 * Method to determine whether or not next differs from word by 1 letter
 	 * @param word
 	 * @param next
-	 * @return
+	 * @return true if neighbor, false if not.
 	 */
 	private static boolean isNeighbor(String word, String next){
 		if (word.length() != next.length()){
@@ -184,7 +190,8 @@ public class Main {
 	}
 	
 	/**
-	 * Method to find friends of given word
+	 * Method to find all neighbors of start word. Adds friends to queue for later check.
+	 * Removes neighbors from dictionary so that we don't get stuck on them later (like marking as visited).
 	 * @param start
 	 * @param queue
 	 * @param it
@@ -210,6 +217,12 @@ public class Main {
 		}
 	}
 	
+	/**
+	 * method to construct final list from end word to parent. in reverse order of print
+	 * @param start
+	 * @param list
+	 * @return word ladder
+	 */
 	private static ArrayList<String> getList(Node start, ArrayList<String> list){
 		String parent;
 		
