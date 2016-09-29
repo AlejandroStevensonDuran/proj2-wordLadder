@@ -17,8 +17,7 @@ public class DFS_check {
 		this.curr_path = path;
 	}
 
-	DFS_check(String start, String end, String lastword, ArrayList<String> path, int size) { // constructos
-		// this.state = "unvisited";
+	DFS_check(String start, String end, String lastword, ArrayList<String> path, int size) { 
 		this.start_word = start;
 		this.end_word = end;
 		this.lastword = lastword;
@@ -56,7 +55,6 @@ public class DFS_check {
 	}
 
 	public static ArrayList<String> getDFSladder(DFS_check myDFS, newDict[] dictionary, ArrayList<String> answer) {
-			//Iterator<String> iterator = dictionary.iterator();
 			int q = 0;
 			while (q < dictionary.length) {
 				if (myDFS.lastword.equals(myDFS.end_word)) { // means a ladder has been
