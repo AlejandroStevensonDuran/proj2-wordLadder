@@ -149,7 +149,7 @@ public class Main {
 			}
 		}
 		/* if no match found return empty */
-		return null; 
+		return new ArrayList<String>(); 
 	}
 	
 	public static Set<String>  makeDictionary () { 
@@ -174,7 +174,7 @@ public class Main {
 	 */
 	public static void printLadder(ArrayList<String> ladder) {
 		
-		if (ladder == null){
+		if (ladder.size() == 0){
 			System.out.println("no word ladder can be found between " +  Main.startWord.toLowerCase() + " and " + Main.endWord.toLowerCase() + ".");
 			System.exit(0);
 		}
