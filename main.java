@@ -47,12 +47,7 @@ public class Main {
 		String[] real = words.toArray(new String[words.size()]);
 		
 		ArrayList<String> result = getWordLadderBFS(real[0], real[1]);
-		
-		if (result == null) { 
-			System.out.println("no word ladder can be found between " + real[0].toLowerCase() + " and " + real[1].toLowerCase() + ".");
-			System.exit(0);
-		}
-		
+
 		printLadder(result);
 	}
 	
@@ -254,4 +249,3 @@ public class Main {
 		return list;
 	}
 }
-
