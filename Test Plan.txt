@@ -7,12 +7,14 @@ Alejandro Stevenson-Duran as72948
 Fall 2016
 Test plan summary
 
-For BFS testing, we did not use jUnit. Instead we wrote our own test initializations that main 
+For both DFS and BFS testing, we did not use jUnit. Instead we wrote our own test initializations that main 
 would call, and tested individual methods at a time to ensure they worked individually before 
 connecting them all. After all methods passed their own tests, they were combined to 'complete 
-the picture'. We covered as many cases as we could think of, and our solution passed them all.
+the picture'. We covered as many cases as we could think of, and our solution passed them all. We also cross
+referenced the oupt of both to ensure that either both methods found a ladder or both methods didn't
+find a ladder. Lastly, we tested both methods' performance by feeding large dictionary file paired with various input words.
 
-For DFS testing, we
+
 
 
 /* BFS */
