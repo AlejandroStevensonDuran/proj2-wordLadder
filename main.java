@@ -4,11 +4,11 @@
  * Samuel Patterson 
  * svp395
  * 16445 
- * <Student2 Name>  
- * <Student2 EID>  
- * <Student2 5-digit Unique No.>  
+ * Alejandro Stevenson-Duran
+ * as72948
+ * 16445
  * Slip days used: <0>  
- * Git URL:  
+ * Git URL:  https://github.com/AlejandroStevensonDuran/proj2-wordLadder/
  * Fall 2016 
  */
 
