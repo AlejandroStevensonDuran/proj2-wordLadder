@@ -70,16 +70,16 @@ public class Main {
 		
 		words = words.toUpperCase();
 		
-		if (words.equals("/QUIT")){ System.exit(0); }
+		if (words.equals("/QUIT")){ new ArrayList<String>(); }
 		
 		
 		String [] splitWords = words.split(" ");
 		
 		word1 = splitWords[0].toUpperCase();
-		if (word1.equals("/QUIT")){ return null; } //System.exit(0); } /******* CLARITY ON PIAZZA******/
+		if (word1.equals("/QUIT")){ return new ArrayList<String>(); } //System.exit(0); } /******* CLARITY ON PIAZZA******/
 		
 		word2 = splitWords[1].toUpperCase();
-		if (word2.equals("/QUIT")){ return null; } //System.exit(0); }
+		if (word2.equals("/QUIT")){ return new ArrayList<String>(); } //System.exit(0); }
 		
 		ArrayList<String> result = new ArrayList<String>();
 		
