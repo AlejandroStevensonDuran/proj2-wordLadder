@@ -170,7 +170,7 @@ public class Main {
 		
 		if (ladder.size() == 0){
 			System.out.println("no word ladder can be found between " +  Main.startWord.toLowerCase() + " and " + Main.endWord.toLowerCase() + ".");
-			System.exit(0);
+			return;
 		}
 		
 		String[] lad = ladder.toArray(new String[ladder.size()]);
