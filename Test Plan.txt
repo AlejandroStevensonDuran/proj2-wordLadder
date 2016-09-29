@@ -62,42 +62,42 @@ f) none
 /* DFS */
 
 1.
-a) Test name
-b) What feature does the test cover – 1-2 phrases or sentences.
-c) Set up for the test – initialization.
-d) Expected output for a good module.
-e) The pass/fail criterion for the test.
-f) Any comments, if any.
+a) myDictionary check
+b) ensures create_myDictionary returns the correst arraylist without going outofbounds
+c) the 5-letter dictionary provided to us
+d) a reference to my newly created dictionary
+e) fails if size of my dictionary != size of original dictionary
+f) passed
 
 2.
-a) Test name
-b) What feature does the test cover – 1-2 phrases or sentences.
-c) Set up for the test – initialization.
-d) Expected output for a good module.
-e) The pass/fail criterion for the test.
-f) Any comments, if any.
+a) word_checker
+b) tests if boolean output is correct
+c) provide 2 valid strings
+d) true, if the words differ by one letter, false otherwise
+e) check boolean values given different pairs of words
+f) passed
 
 3.
-a) Test name
-b) What feature does the test cover – 1-2 phrases or sentences.
-c) Set up for the test – initialization.
-d) Expected output for a good module.
-e) The pass/fail criterion for the test.
-f) Any comments, if any.
+a) check dfs recursion
+b) checks if getdfsladder has an endless recursive loop
+c) provide different cases such as very short/long ladders
+d) succesfull program termination
+e) program termination
+f) passed
 
 4.
-a) Test name
-b) What feature does the test cover – 1-2 phrases or sentences.
-c) Set up for the test – initialization.
-d) Expected output for a good module.
-e) The pass/fail criterion for the test.
-f) Any comments, if any.
+a) DFS visited nodes
+b) class newDict which initializes each node to visited=false
+c) provide different cases such as very short/long ladders
+d) visited nodes given in each recursive stage
+e) all nodes with correct boolean value of visited
+f) passed
 
 5.
-a) Test name
-b) What feature does the test cover – 1-2 phrases or sentences.
-c) Set up for the test – initialization.
-d) Expected output for a good module.
-e) The pass/fail criterion for the test.
-f) Any comments, if any.
+a) dfs performance
+b) tests the dfs time perforamnce
+c) feed very large dictionary and two random words
+d) a correct ladder
+e) a correct ladder within a 5 second lapse for all cases
+f) passed for all tested words
 
