@@ -160,13 +160,13 @@ public class Main {
 	public static void printLadder(ArrayList<String> ladder) {
 		String[] lad = ladder.toArray(new String[ladder.size()]);
 		
-		/* start at the end so that they print in order */
-		System.out.println("a " + (ladder.size() - 2) + "-rung word ladder exists between " + lad[lad.length - 1].toLowerCase() + " and " + lad[0].toLowerCase() + ".");
+		System.out.println("a " + (ladder.size() - 2) + "-rung word ladder exists between " + lad[0].toLowerCase() + " and " + lad[lad.length - 1].toLowerCase() + ".");
 		
-		for (int i = lad.length - 1; i >= 0; i--){
+		for (int i = 0; i < lad.length; i++){
 			System.out.println(lad[i].toLowerCase());
 		}
 	}
+	
 	
 	/**
 	 * Method to determine whether or not next differs from word by 1 letter
