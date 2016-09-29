@@ -3,7 +3,8 @@ Samuel Patterson svp395
 <Student Name> <Student EID>
 Fall 2016
 
-Student A did the DFS module initially, and both sat down together for the debugging.
+Originally, Samuel worked on intial BFS implementation, and Alejandro 
+worked on initial DFS implemenation. , and both sat down together for the debugging.
 … Five test cases were written by … and 5 by ….
 We spent approximately xxx hours together in the same room. We also used screen
 sharing for discussions.
