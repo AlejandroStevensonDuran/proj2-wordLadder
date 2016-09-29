@@ -42,7 +42,7 @@ public class Main {
 		/* bfs */
 		ArrayList<String> words = parse(kb);
 		
-		if (words == null){System.exit(0);}
+		if (words.size() == 0){System.exit(0);}
 		
 		String[] real = words.toArray(new String[words.size()]);
 		
