@@ -98,14 +98,13 @@ public class Main {
 		return result;
 	} 
 	
-	public static ArrayList<String> getWordLadderDFS(String start, String end) {
-			// Returned list should be ordered start to end.  Include start and end.
-			// Return empty list if no ladder. 
-			// TODO some code 
-			Set<String> dict = makeDictionary(); 
-			// TODO more code
-		
-		return null; // replace this line later with real return
+	public static ArrayList<String> getWordLadderDFS(String start, String end) {	
+		Set<String> dict = makeDictionary();	
+		Main.startWord = start;
+		Main.endWord = end;
+		ArrayList<String> ladder = DFS_check.DFSwordladder(dict, start, end);
+		printLadder(ladder);
+		return ladder;
 	}
 	
 	
