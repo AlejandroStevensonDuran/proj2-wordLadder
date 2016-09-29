@@ -3,10 +3,14 @@ Samuel Patterson svp395
 <Student Name> <Student EID>
 Fall 2016
 
-Originally, Samuel worked on intial BFS implementation, and Alejandro 
-worked on initial DFS implemenation. , and both sat down together for the debugging.
-… Five test cases were written by … and 5 by ….
-We spent approximately xxx hours together in the same room. We also used screen
-sharing for discussions.
-The final testing was done together.
-etc.
+Samuel worked on intial BFS implementation, and Alejandro 
+worked on initial DFS implemenation. We completed and debugged each implementation 
+together.
+We wrote five test cases for each implementation (BFS and DFS) together, detailed
+in the testing plan file.
+We spent approximately 10 hours together in the same room. We used git extensively
+to keep track of changes each of us made.
+The final testing and completion of the project was done together at the PCL.
+We both contributed a fair amount to each implementation, as well as to the
+completion of the other functions (parse, print, etc.). We also both helped
+write the team plan and test plan.
