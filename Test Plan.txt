@@ -2,6 +2,7 @@
 EE422C Project 3 (Word Ladder) Test Plan
 
 Samuel Patterson svp395
+Alejandro Stevenson-Duran as72948
 <Student Name> <Student EID>
 Fall 2016
 Test plan summary
