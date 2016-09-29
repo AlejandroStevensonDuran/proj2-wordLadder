@@ -27,50 +27,60 @@ public class DFS_check {
 	}
 
 	public static ArrayList<String> DFSwordladder(Set<String> dictionary, String start, String end) {
+		start = start.toLowerCase();
+		end = end.toLowerCase();
 		ArrayList<String> curr_path = new ArrayList<String>();
 		curr_path.add(start); // start path with first word
 		ArrayList<String> answer = new ArrayList<String>();
 		DFS_check firstDFS = new DFS_check(start, end, start, curr_path, 1);
-		ArrayList<String> visited = new ArrayList<String>();
-		
-		ArrayList<String> result = getDFSladder(firstDFS, dictionary, visited, answer);
+	//	ArrayList<String> visited = new ArrayList<String>();
+		int length = dictionary.size();
+		newDict[] mydict = new newDict[length];
+		mydict = create_myDictionary(dictionary, length, mydict);
+		ArrayList<String> result = getDFSladder(firstDFS, mydict, answer);
 
 		return result;
 	}
+	
+	private static newDict[] create_myDictionary(Set<String> dictionary, int length, newDict[] mydict){
+		Iterator<String> iterator = dictionary.iterator();
+		int i = 0;
+		while (length > i) {
+			newDict check = new newDict();
+			check.word = iterator.next();
+			check.word = check.word.toLowerCase();
+			mydict[i] = check;
+			i++;
+		}
+		return mydict;
+	}
 
-	public static ArrayList<String> getDFSladder(DFS_check myDFS, Set<String> dictionary, ArrayList<String> visited, ArrayList<String> answer) {
-			Iterator<String> iterator = dictionary.iterator();
+	public static ArrayList<String> getDFSladder(DFS_check myDFS, newDict[] dictionary, ArrayList<String> answer) {
+			//Iterator<String> iterator = dictionary.iterator();
 			int q = 0;
-			while (iterator.hasNext()) {
+			while (q < dictionary.length) {
 				if (myDFS.lastword.equals(myDFS.end_word)) { // means a ladder has been
 					// completed
 					answer = myDFS.curr_path;
 					return answer;
 				} 
-				String curr_word = iterator.next();
-				// System.out.println(curr_word);
-		//		if (!(visited.contains(curr_word))) {
+				newDict curr_node = dictionary[q];
+				String curr_word = curr_node.word;
 						if (word_checker(myDFS.lastword, curr_word)) {
-							if (!(visited.contains(curr_word))) {
+							if (curr_node.visited == false) {  // take this only if it isn't visited
 							myDFS.curr_path.add(curr_word);
-							visited.add(curr_word);
-							// iterator.remove();
+							dictionary[q].visited = true;
 							DFS_check next_DFS = new DFS_check(myDFS.start_word, myDFS.end_word, curr_word, myDFS.curr_path, myDFS.path_size + 1);
-							ArrayList<String> checky = getDFSladder(next_DFS, dictionary, visited, answer);
+							ArrayList<String> checky = getDFSladder(next_DFS, dictionary, answer);
 							if (checky.size() != 0) { // means answer has been
 								return checky;
 							}
 						}
 					}
-			//	}
 				q++;
 			}
-			myDFS.curr_path.remove(myDFS.path_size - 1); // after check, remove
-															// from path
+			myDFS.curr_path.remove(myDFS.path_size - 1); // after check, remove from path
 			return new ArrayList<String>();
-		
-		// return null;
-
 	}
 
 	public static boolean word_checker(String curr, String tocheck) {
