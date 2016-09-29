@@ -9,13 +9,11 @@ public class Node {
 	public Node(String s){
 		val = s;
 		parent = null;
-		marked = true;
 	}
 	
 	public Node(String s, Node p){
 		val = s;
 		parent = p;
-		marked = true;
 	}
 	
 	public Node getParent(){
