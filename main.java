@@ -98,7 +98,6 @@ public class Main {
 		Main.startWord = start;
 		Main.endWord = end;
 		ArrayList<String> ladder = DFS_check.DFSwordladder(dict, start, end);
-		printLadder(ladder);
 		return ladder;
 	}
 	
