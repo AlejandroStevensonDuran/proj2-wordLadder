@@ -19,7 +19,8 @@ import java.io.*;
 
 public class Main {
 	
-	// static variables and constants only here. 
+	public static String startWord;
+	public static String endWord;
 	
 	public static void main(String[] args) throws Exception {
 		Scanner kb; // input Scanner for commands
@@ -69,20 +70,30 @@ public class Main {
 	public static ArrayList<String> parse(Scanner keyboard) {
 
 		String words = keyboard.nextLine();
+		String word1;	
+		String word2;
 		
 		words = words.toUpperCase();
 		
-		if (words.equals("/QUIT")){ return null; }
+		if (words.equals("/QUIT")){ System.exit(0); }
+		
 		
 		String [] splitWords = words.split(" ");
-		String word1 = splitWords[0].toUpperCase();		
-		String word2 = splitWords[1].toUpperCase();
+		
+		word1 = splitWords[0].toUpperCase();
+		if (word1.equals("/QUIT")){ return null; } //System.exit(0); } /******* CLARITY ON PIAZZA******/
+		
+		word2 = splitWords[1].toUpperCase();
+		if (word2.equals("/QUIT")){ return null; } //System.exit(0); }
 		
 		ArrayList<String> result = new ArrayList<String>();
 		
 		/* put words in proper index */
 		result.add(0, word1);
 		result.add(1, word2);
+		
+		Main.startWord = word1;
+		Main.endWord = word2;
 		
 		return result;
 	} 
@@ -108,6 +119,9 @@ public class Main {
 		start = start.toUpperCase();
 		end = end.toUpperCase();
 		
+		Main.startWord = start;
+		Main.endWord = end;
+		
 		Node out;
 		Node begin = new Node(start);
 		
@@ -125,6 +139,7 @@ public class Main {
 			if (out.getVal().equals(end)){
 				result = getList(out, result);
 				result.add(0, end); // have to put end word into result, because if it's found, it isn't originally added
+				Collections.reverse(result);
 				return result;
 			}
 			else{
@@ -158,6 +173,12 @@ public class Main {
 	 * @param ladder
 	 */
 	public static void printLadder(ArrayList<String> ladder) {
+		
+		if (ladder == null){
+			System.out.println("no word ladder can be found between " +  Main.startWord.toLowerCase() + " and " + Main.endWord.toLowerCase() + ".");
+			System.exit(0);
+		}
+		
 		String[] lad = ladder.toArray(new String[ladder.size()]);
 		
 		System.out.println("a " + (ladder.size() - 2) + "-rung word ladder exists between " + lad[0].toLowerCase() + " and " + lad[lad.length - 1].toLowerCase() + ".");
